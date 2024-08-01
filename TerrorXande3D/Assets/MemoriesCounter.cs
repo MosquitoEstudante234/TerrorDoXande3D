@@ -14,7 +14,7 @@ public class MemoriesCounter : MonoBehaviour
     }
     private void Update()
     {
-        memoriesCounter.text = memoriesCount.ToString();
+        memoriesCounter.text = "Coletados:" + memoriesCount.ToString() + "/8";
 
         if (whatScene[0])
         {
