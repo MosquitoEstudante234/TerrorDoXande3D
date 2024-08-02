@@ -20,7 +20,7 @@ public class MemoriesCounter : MonoBehaviour
         {
             if(memoriesCount == 8)
             {
-
+                memoriesCount = 0;
             }
         }
         if (whatScene[1])
