@@ -44,7 +44,7 @@ public class Creature : MonoBehaviour
         {
             agent.speed = 5f;
             OnPatrolling.Invoke();
-        }
+        } 
 
         print(monsterAIs);
 

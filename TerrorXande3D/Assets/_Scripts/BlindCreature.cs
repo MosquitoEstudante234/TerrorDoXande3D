@@ -42,6 +42,10 @@ public class BlindCreature : MonoBehaviour
 
     private void Update()
     {
+        if (!Input.GetKey(KeyCode.Space))
+        {
+            agent.speed = 0;
+        }
 
         if (Input.GetButtonUp("Jump"))
         {
@@ -127,7 +131,7 @@ public class BlindCreature : MonoBehaviour
     }
     public IEnumerator TimeToAttack()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         agent.speed = 15;
     }
 }
