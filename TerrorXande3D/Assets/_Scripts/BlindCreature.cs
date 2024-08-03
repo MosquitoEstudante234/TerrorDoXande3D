@@ -1,43 +1,66 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
-public enum MonsterAIs
+public enum MonsterAI
 {
     Break, Patrol, Chase
 }
 [RequireComponent(typeof(NavMeshAgent))]
 
-public class Creature : MonoBehaviour
+public class BlindCreature : MonoBehaviour
 {
+    public static BlindCreature Instance;
     public Transform[] patrolPoint;
     public UnityEvent OnPatrolling, OnChasing, OnBreak;
-
-    NavMeshAgent agent;
-    [Header("Radius")]
-    [SerializeField] float SetRadius;
-
+    public Collider detectArea;
+    public NavMeshAgent agent;
+    public bool isAngel;
+    public bool seekPlayer;
     [Header("Identifier")]
     public Transform playerPos, vision;
     RaycastHit hit;
 
     [Header("StateMachine")]
-    MonsterAIs monsterAIs;
-
-    public bool CanPatrol;
-    int lastPoint;
+    MonsterAI monsterAI;
     int pointsToPatrol;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         OnPatrolling.Invoke();
+        agent.speed = 0;
     }
+
+
+
+       
+
     private void Update()
     {
-        print(monsterAIs);
 
+        if (Input.GetButtonUp("Jump"))
+        {
+            agent.speed = 0;
+        }
+        if (Input.GetButtonDown("Jump"))
+        {
+            StartCoroutine(TimeToAttack());
+        }
+
+        print(monsterAI);
+        if (isAngel)
+        {
+            if (seekPlayer)
+            {
+                agent.SetDestination(playerPos.position);
+                return;
+            }
+        }
         if (Physics.Linecast(vision.position, playerPos.position, out hit))
         {
             if (hit.distance >= 10)
@@ -47,23 +70,21 @@ public class Creature : MonoBehaviour
             if (hit.collider.CompareTag("Player"))
             {
                 print(hit.collider.name);
-                if (!monsterAIs.Equals(MonsterAIs.Chase))
+                if (!monsterAI.Equals(MonsterAI.Chase))
                 {
-                    SetMonsterAI(MonsterAIs.Chase);
+                    SetMonsterAI(MonsterAI.Chase);
                 }
                 agent.SetDestination(playerPos.position);
             }
         }
-
-        if (monsterAIs.Equals(MonsterAIs.Chase))
+        if (monsterAI.Equals(MonsterAI.Chase))
         {
             if (!hit.collider.CompareTag("Player"))
             {
-                monsterAIs = MonsterAIs.Patrol;
+                monsterAI = MonsterAI.Patrol;
                 NextPointFixedPoint();
             }
         }
-        
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -75,6 +96,10 @@ public class Creature : MonoBehaviour
     }
     public void NextPointFixedPoint()
     {
+        if(isAngel)
+        {
+            return;
+        }
         agent.SetDestination(patrolPoint[pointsToPatrol].position);
         pointsToPatrol++;
         if (pointsToPatrol >= patrolPoint.Length)
@@ -82,32 +107,27 @@ public class Creature : MonoBehaviour
             pointsToPatrol = 0;
         }
     }
-
-    IEnumerator BreakTime()
+    public void SetMonsterAI(MonsterAI state)
     {
-        yield return new WaitForSeconds(2);
-        monsterAIs = MonsterAIs.Patrol;
-        StopAllCoroutines();
-
-    }
-
-    public void SetMonsterAI(MonsterAIs state)
-    {
-        monsterAIs = state;
-        switch (monsterAIs)
+        monsterAI = state;
+        switch (monsterAI)
         {
-            case MonsterAIs.Break:
+            case MonsterAI.Break:
 
                 OnBreak.Invoke();
                 break;
-            case MonsterAIs.Patrol:
+            case MonsterAI.Patrol:
                 NextPointFixedPoint();
                 OnPatrolling.Invoke();
                 break;
-            case MonsterAIs.Chase:
+            case MonsterAI.Chase:
                 OnChasing.Invoke();
                 break;
         }
     }
+    public IEnumerator TimeToAttack()
+    {
+        yield return new WaitForSeconds(0.5f);
+        agent.speed = 15;
+    }
 }
-
