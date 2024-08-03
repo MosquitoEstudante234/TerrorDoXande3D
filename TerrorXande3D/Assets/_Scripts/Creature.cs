@@ -36,6 +36,16 @@ public class Creature : MonoBehaviour
     }
     private void Update()
     {
+        if(Input.GetButtonDown("Jump"))
+        {
+            agent.speed = 1f;
+        }
+        if (Input.GetButtonUp("Jump"))
+        {
+            agent.speed = 5f;
+            OnPatrolling.Invoke();
+        }
+
         print(monsterAIs);
 
         if (Physics.Linecast(vision.position, playerPos.position, out hit))
