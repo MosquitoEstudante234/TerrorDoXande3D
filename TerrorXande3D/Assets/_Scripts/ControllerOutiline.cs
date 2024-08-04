@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ControllerOutiline : MonoBehaviour
@@ -6,11 +7,20 @@ public class ControllerOutiline : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            gameObject.GetComponent<Outline>().enabled = true;
+            StartCoroutine(OutlineAppears());
         }
         if (Input.GetButtonUp("Jump"))
         {
             gameObject.GetComponent<Outline>().enabled = false;
         }
+        if (!Input.GetKey(KeyCode.Space))
+        {
+            gameObject.GetComponent<Outline>().enabled = false;
+        }
+    }
+    public IEnumerator OutlineAppears()
+    {
+        yield return new WaitForSeconds(0.1f);
+        gameObject.GetComponent<Outline>().enabled = true;
     }
 }

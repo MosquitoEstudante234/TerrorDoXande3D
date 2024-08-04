@@ -5,5 +5,6 @@ public class MemorieObj : InterectableObj
         MemoriesCounter.Instance.memoriesCount++;
         PlayerInteract.Instance.OnInteractionEffected.Invoke();
         Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 }

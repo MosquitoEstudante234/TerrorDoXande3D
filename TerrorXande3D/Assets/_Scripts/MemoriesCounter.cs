@@ -14,28 +14,11 @@ public class MemoriesCounter : MonoBehaviour
     }
     private void Update()
     {
-        memoriesCounter.text = "Collect 8 candles " + "Collected: " + memoriesCount.ToString() + "/8";
+        memoriesCounter.text = "Collect 5 candles " + "Collected: " + memoriesCount.ToString() + "/5";
 
-        if (whatScene[0])
-        {
-            if(memoriesCount == 8)
+            if(memoriesCount == 5)
             {
                 memoriesCount = 0;
             }
-        }
-        if (whatScene[1])
-        {
-            if (memoriesCount == 6)
-            {
-
-            }
-        }
-        if (whatScene[2])
-        {
-            if (memoriesCount == 12)
-            {
-                
-            }
-        }
     }
 }
