@@ -6,6 +6,8 @@ public class MemoriesCounter : MonoBehaviour
     public TextMeshProUGUI memoriesCounter;
     public int memoriesCount;
 
+    public int Artifact = 10;
+
     public bool[] whatScene = new bool[3];
 
     private void Awake()
@@ -18,7 +20,7 @@ public class MemoriesCounter : MonoBehaviour
     }
     private void Update()
     {
-        memoriesCounter.text = "Collect 5 candles " + "Collected: " + memoriesCount.ToString() + "/5";
+        memoriesCounter.text = "Collect " + Artifact.ToString() + " Artifacts ";
 
             if(memoriesCount == 5)
             {
@@ -28,5 +30,7 @@ public class MemoriesCounter : MonoBehaviour
             {
                 PickFlashlight.IsPicked = true;
             }
+            
     }
+
 }
