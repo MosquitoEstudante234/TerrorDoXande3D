@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class CurrentMission : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public TMP_Text Mission;
+    public string missiontxt;
+    public void Start()
     {
-        
+        missiontxt = "Find your flashlight";
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+    private void Update()
+    {   
+        if (PickFlashlight.IsPicked == true)
+        {
+            missiontxt = "Check the garage";
+        }
+        Mission.text = missiontxt.ToString();
     }
+   
 }

@@ -12,6 +12,10 @@ public class MemoriesCounter : MonoBehaviour
     {
         Instance = this;
     }
+    public void Start()
+    {
+        memoriesCount = 0;
+    }
     private void Update()
     {
         memoriesCounter.text = "Collect 5 candles " + "Collected: " + memoriesCount.ToString() + "/5";
@@ -19,6 +23,10 @@ public class MemoriesCounter : MonoBehaviour
             if(memoriesCount == 5)
             {
                 memoriesCount = 0;
+            }
+            if(memoriesCount == 1)
+            {
+                PickFlashlight.IsPicked = true;
             }
     }
 }
