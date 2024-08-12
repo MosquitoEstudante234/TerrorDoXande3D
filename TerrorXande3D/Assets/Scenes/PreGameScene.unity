@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1216277579}
-  m_IndirectSpecularColor: {r: 0.0008506734, g: 0.002288657, b: 0.04716612, a: 1}
+  m_IndirectSpecularColor: {r: 0.0008482928, g: 0.0022845985, b: 0.047161847, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -78635,35 +78635,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017856163}
   m_Mesh: {fileID: -5053925668127403250, guid: d21e7cf10cc3fd642941de2ffd22ba77, type: 3}
---- !u!114 &1018261967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1457923994935541754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f6585d535305fe4d8e68389ada5aeae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorOpened: 0
-  openAngle: -90
-  closeAngle: 180
-  audioDoor: []
---- !u!114 &1018261968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1457923994935541754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f11d29c31bd20664299ed31387c7ea2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handDistance: 3
 --- !u!64 &1018261969
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -81340,35 +81311,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048800948}
   m_Mesh: {fileID: 4579454407841743219, guid: d21e7cf10cc3fd642941de2ffd22ba77, type: 3}
---- !u!114 &1049012578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6157239674465900429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f6585d535305fe4d8e68389ada5aeae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorOpened: 0
-  openAngle: -90
-  closeAngle: 180
-  audioDoor: []
---- !u!114 &1049012579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6157239674465900429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f11d29c31bd20664299ed31387c7ea2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handDistance: 3
 --- !u!64 &1049012580
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -176685,11 +176627,9 @@ GameObject:
   - component: {fileID: 2394568450734209701}
   - component: {fileID: 7265119794343606489}
   - component: {fileID: 1018261969}
-  - component: {fileID: 1018261967}
-  - component: {fileID: 1018261968}
   m_Layer: 0
   m_Name: Refrigerator_Door.001
-  m_TagString: Memories
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219990,11 +219930,9 @@ GameObject:
   - component: {fileID: 109341201180182104}
   - component: {fileID: 8150179617531119343}
   - component: {fileID: 1049012580}
-  - component: {fileID: 1049012578}
-  - component: {fileID: 1049012579}
   m_Layer: 0
   m_Name: Refrigerator_Door_01.001
-  m_TagString: Memories
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
