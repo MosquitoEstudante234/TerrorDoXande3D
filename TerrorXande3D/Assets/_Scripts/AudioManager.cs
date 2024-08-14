@@ -52,6 +52,7 @@ public class AudioManager : MonoBehaviour
     public void Start()
     {
         // Play("Fase1");
+        //FindObjectOfType<AudioManager>().Play("Nome");
     }
 
 
