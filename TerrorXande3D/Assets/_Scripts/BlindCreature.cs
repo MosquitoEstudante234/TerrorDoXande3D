@@ -45,11 +45,13 @@ public class BlindCreature : MonoBehaviour
         if (!Input.GetKey(KeyCode.Space))
         {
             agent.speed = 0;
+            MonsterRun.CanRun = false;
         }
 
         if (Input.GetButtonUp("Jump"))
         {
             agent.speed = 0;
+            MonsterRun.CanRun = false;
         }
         if (Input.GetButtonDown("Jump"))
         {
@@ -133,5 +135,6 @@ public class BlindCreature : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         agent.speed = 15;
+        MonsterRun.CanRun = true;
     }
 }
