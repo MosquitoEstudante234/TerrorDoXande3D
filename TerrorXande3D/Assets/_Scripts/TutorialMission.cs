@@ -7,7 +7,8 @@ public class TutorialMission : MonoBehaviour
 {
     public static int PaperCount;
     public TMP_Text PaperCountTxt;
-    public GameObject ExitTutorialCol, OtherMissions;
+    public GameObject ExitTutorialCol, OtherMissions, TutorialTextObj;
+    public bool IsUnlocked = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,15 @@ public class TutorialMission : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PaperCountTxt.text = "Find" + PaperCount.ToString() + "Papers";
+        if (IsUnlocked == true)
+        {
+            TutorialTextObj.SetActive(false);
+        }
+        else
+        {
+            PaperCountTxt.text = "Find " + PaperCount.ToString() + " Papers";
+            print("sim");
+        }
 
         if (PaperCount == 0)
         {
@@ -30,6 +39,7 @@ public class TutorialMission : MonoBehaviour
         {
             ExitTutorialCol.SetActive(false);
             OtherMissions.SetActive(true);
+            IsUnlocked = true;
         }
     }
 }

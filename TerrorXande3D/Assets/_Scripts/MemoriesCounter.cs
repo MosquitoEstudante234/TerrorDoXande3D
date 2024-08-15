@@ -30,7 +30,19 @@ public class MemoriesCounter : MonoBehaviour
             {
                 PickFlashlight.IsPicked = true;
             }
-            
+            if (Artifact == 7) 
+            {
+                FindObjectOfType<AudioManager>().Play("TheTragicEnd");
+            }
+            if (Artifact == 2)
+            {
+                FindObjectOfType<AudioManager>().Play("ScreamsOfLoss");
+            }
+            if (Artifact == 4)
+            {
+            FindObjectOfType<AudioManager>().Play("CryingofLoss");
+            }
+
     }
 
 }
