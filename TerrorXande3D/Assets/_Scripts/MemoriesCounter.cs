@@ -7,7 +7,7 @@ public class MemoriesCounter : MonoBehaviour
     public int memoriesCount;
     public Animator animator;
 
-    public int Artifact = 10;
+    public int Artifact = 5;
 
     public bool[] whatScene = new bool[3];
 
@@ -31,7 +31,7 @@ public class MemoriesCounter : MonoBehaviour
             {
                 PickFlashlight.IsPicked = true;
             }
-            if (Artifact == 8) 
+            if (Artifact == 4) 
             {
                 FindObjectOfType<AudioManager>().Play("TheTragicEnd");
             }
@@ -39,7 +39,7 @@ public class MemoriesCounter : MonoBehaviour
             {
                 FindObjectOfType<AudioManager>().Play("ScreamsOfLoss");
             }
-            if (Artifact == 5)
+            if (Artifact == 2)
             {
             FindObjectOfType<AudioManager>().Play("CryingofLoss");
             }

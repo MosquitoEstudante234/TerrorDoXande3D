@@ -8,6 +8,7 @@ TagManager:
   - Memories
   - JumpscareTrigger
   - Tutorial
+  - CloseToRoom
   layers:
   - Default
   - TransparentFX
