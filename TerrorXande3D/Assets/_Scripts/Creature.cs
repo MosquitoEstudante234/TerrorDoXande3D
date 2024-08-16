@@ -42,7 +42,7 @@ public class Creature : MonoBehaviour
         }
         if (Input.GetButtonUp("Jump"))
         {
-            agent.speed = 5f;
+            agent.speed = 10f;
             OnPatrolling.Invoke();
         } 
 
@@ -60,6 +60,7 @@ public class Creature : MonoBehaviour
                 if (!monsterAIs.Equals(MonsterAIs.Chase))
                 {
                     SetMonsterAI(MonsterAIs.Chase);
+                    FindObjectOfType<AudioManager>().Play("ChaseScream");
                 }
                 agent.SetDestination(playerPos.position);
             }

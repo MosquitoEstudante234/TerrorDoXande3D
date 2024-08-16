@@ -5,6 +5,7 @@ public class MemoriesCounter : MonoBehaviour
     public static MemoriesCounter Instance;
     public TextMeshProUGUI memoriesCounter;
     public int memoriesCount;
+    public Animator animator;
 
     public int Artifact = 10;
 
@@ -42,7 +43,7 @@ public class MemoriesCounter : MonoBehaviour
             {
             FindObjectOfType<AudioManager>().Play("CryingofLoss");
             }
-
+            animator.SetFloat("Artifacts", Artifact);
     }
 
 }
