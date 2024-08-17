@@ -8,7 +8,7 @@ public class CarCrashScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene("CarCrashScene");
     }
 
     // Update is called once per frame

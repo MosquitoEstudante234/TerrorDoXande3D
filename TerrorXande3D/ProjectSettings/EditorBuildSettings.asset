@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HospitalScene.unity
     guid: 57258fb20498d3c4bb4ffd3a528558af
+  - enabled: 1
+    path: Assets/Scenes/CarCrashScene.unity
+    guid: 64628e778fc405840b5fccf96a037445
   m_configObjects: {}

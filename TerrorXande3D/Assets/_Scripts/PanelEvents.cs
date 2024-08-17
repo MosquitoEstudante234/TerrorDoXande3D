@@ -9,4 +9,12 @@ public class PanelEvents : MonoBehaviour
     {
         SceneManager.LoadScene("GameScene");
     }
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
 }

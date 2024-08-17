@@ -6,7 +6,7 @@ public class MemoriesCounter : MonoBehaviour
     public TextMeshProUGUI memoriesCounter;
     public int memoriesCount;
     public Animator animator;
-    public GameObject Exit;
+    public GameObject Exit, InimigoNormal, InimigoInv;
 
     public int Artifact = 5;
 
@@ -47,7 +47,9 @@ public class MemoriesCounter : MonoBehaviour
              if (Artifact == 0) 
             {
                 Exit.SetActive(true);
-                memoriesCounter.text = "ESCAPE";
+                memoriesCounter.text = "FIND the white door";
+                InimigoNormal.SetActive(false);
+                InimigoInv.SetActive(true);
             }
             animator.SetFloat("Artifacts", Artifact);
 
