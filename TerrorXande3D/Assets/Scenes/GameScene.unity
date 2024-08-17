@@ -92615,19 +92615,19 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: CryingofLoss
     clip: {fileID: 8300000, guid: 6f3c310492e92644fadc818e6489fe5f, type: 3}
-    volume: 0.2
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: ScreamsOfLoss
     clip: {fileID: 8300000, guid: dfe3c41b60bcf1b43bb641ee3f562169, type: 3}
-    volume: 0.2
+    volume: 0.08
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: TheTragicEnd
     clip: {fileID: 8300000, guid: 69b495d977439ed4b955b1ff3b60dc51, type: 3}
-    volume: 0.08
+    volume: 0.03
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -92646,6 +92646,18 @@ MonoBehaviour:
   - name: EnterExit
     clip: {fileID: 8300000, guid: 823451502aef5d749aa8c8f5190a571d, type: 3}
     volume: 0.59
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TurnPage
+    clip: {fileID: 8300000, guid: e938a617e063fa84e9e430d8c5953385, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ArtifactSound
+    clip: {fileID: 8300000, guid: e8615719134f329489db99bf761a6427, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}

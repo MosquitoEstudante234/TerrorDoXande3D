@@ -26,6 +26,7 @@ public class TutoPapers : MonoBehaviour
             Paper.SetActive(true);
             Destroy(gameObject);
             TutorialMission.PaperCount--;
+            FindObjectOfType<AudioManager>().Play("TurnPage");
         }
     }
 }

@@ -7,5 +7,6 @@ public class MemorieObj : InterectableObj
         Destroy(gameObject);
         Destroy(transform.parent.gameObject);
         MemoriesCounter.Instance.Artifact--;
+        FindObjectOfType<AudioManager>().Play("ArtifactSound");
     }
 }
