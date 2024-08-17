@@ -31,7 +31,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2.7
+    m_StopTime: 11.433333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -51,28 +51,28 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.35
+  - time: 0.33333334
     functionName: LoadSchool
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.1166667
+  - time: 7.133333
     functionName: LoadPreGame
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.85
+  - time: 9.3
     functionName: LoadMenu
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 2.7
+  - time: 11.433333
     functionName: DeleteSelf
     data: 
     objectReferenceParameter: {fileID: 0}
