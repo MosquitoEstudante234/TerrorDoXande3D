@@ -6,6 +6,7 @@ public class MemoriesCounter : MonoBehaviour
     public TextMeshProUGUI memoriesCounter;
     public int memoriesCount;
     public Animator animator;
+    public GameObject Exit;
 
     public int Artifact = 5;
 
@@ -43,7 +44,13 @@ public class MemoriesCounter : MonoBehaviour
             {
             FindObjectOfType<AudioManager>().Play("CryingofLoss");
             }
+             if (Artifact == 0) 
+            {
+                Exit.SetActive(true);
+                memoriesCounter.text = "ESCAPE";
+            }
             animator.SetFloat("Artifacts", Artifact);
+
     }
 
 }

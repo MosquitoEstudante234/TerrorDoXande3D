@@ -9,6 +9,7 @@ TagManager:
   - JumpscareTrigger
   - Tutorial
   - CloseToRoom
+  - ExitTrigger
   layers:
   - Default
   - TransparentFX
