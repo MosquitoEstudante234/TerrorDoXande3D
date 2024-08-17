@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class Menu : MonoBehaviour
 {
@@ -18,5 +19,9 @@ public class Menu : MonoBehaviour
     public void ReplayButton()
     {
         Time.timeScale = 1;
+    }
+    public void ChangeMenus(GameObject NextButton) 
+    {
+    EventSystem.current.SetSelectedGameObject(NextButton);
     }
 }
