@@ -21139,8 +21139,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tutorial: Artefatos\n\nolhos abertos: n\xE3o enxerga os artefatos\n\nolhos
-    fechados: enxerga os artefatos"
+  m_text: 'Tutorial: Artifacts
+
+    
+
+    eyes open: cannot see the artifacts
+
+    
+
+    eyes
+    closed: sees the artifacts'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7bbdf486fa9e85e4ca7e64b0fc98c7cd, type: 2}
   m_sharedMaterial: {fileID: -2396175438079233863, guid: 7bbdf486fa9e85e4ca7e64b0fc98c7cd, type: 2}
@@ -91835,9 +91843,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tutorial: Monstro I (monstro de carne)\n\nolhos abertos: te persegue\n\nolhos
-    fechados: n\xE3o te persegue (fique atento aos sons de respira\xE7\xE3o\n\ncomo
-    fechar os olhos: segure a barra de espa\xE7o"
+  m_text: 'Tutorial: Monster I (meat monster)
+
+    
+
+    eyes open: chases you
+
+    
+
+    eyes
+    closed: does not chase you (pay attention to the breathing sounds)
+
+    
+
+    how
+    to close your eyes: hold the space bar'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7bbdf486fa9e85e4ca7e64b0fc98c7cd, type: 2}
   m_sharedMaterial: {fileID: -2396175438079233863, guid: 7bbdf486fa9e85e4ca7e64b0fc98c7cd, type: 2}
@@ -108451,10 +108471,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tutorial: Monstro II (monstro de pedra)\n\nolhos fechados: corre diretamente
-    em sua dire\xE7\xE3o, ele sempre sabe onde voc\xEA est\xE1 (preste aten\xE7\xE3o
-    nos passos dele)\n\nolhos abertos: fica im\xF3vel\n\ncomo ligar a lanterna: pressione
-    \"f\""
+  m_text: 'Tutorial: Monster II (stone monster)
+
+    
+
+    eyes closed: runs directly
+    towards you, he always knows where you are (pay attention to his footsteps)
+
+    
+
+    eyes
+    open: stays still
+
+    
+
+    how to turn on the flashlight: press "f"'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7bbdf486fa9e85e4ca7e64b0fc98c7cd, type: 2}
   m_sharedMaterial: {fileID: -2396175438079233863, guid: 7bbdf486fa9e85e4ca7e64b0fc98c7cd, type: 2}

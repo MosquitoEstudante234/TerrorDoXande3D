@@ -56720,6 +56720,8 @@ MonoBehaviour:
   memoriesCount: 1
   animator: {fileID: 0}
   Exit: {fileID: 0}
+  InimigoNormal: {fileID: 0}
+  InimigoInv: {fileID: 0}
   Artifact: 10
   whatScene: 000000
 --- !u!4 &703115366
@@ -99111,7 +99113,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8c0330d01e2bb044f8601bbfe827960c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.574
+  m_Volume: 0.11
   m_Pitch: 1
   Loop: 0
   Mute: 0
