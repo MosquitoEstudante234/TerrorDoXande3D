@@ -18,6 +18,10 @@ public class TutoPapers : MonoBehaviour
         { 
             Paper.SetActive(false);
         }
+        if (Input.GetKey(KeyCode.P))
+        {
+            MemoriesCounter.Instance.Artifact = 0;
+        }
     }
     public void OnMouseOver()
     {

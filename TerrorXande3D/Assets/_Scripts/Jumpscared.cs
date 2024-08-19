@@ -24,6 +24,7 @@ public class Jumpscared : MonoBehaviour
             timerJumpscare -= Time.deltaTime;
             if(timerJumpscare <= 0)
             {
+                Cursor.lockState = CursorLockMode.None;
                 SceneManager.LoadScene("GameScene");
             }
         }
